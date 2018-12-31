@@ -1,0 +1,72 @@
+﻿@model MVC_EF_employee.Models.EmployeeModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Find</title>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div align="center">
+        <h4>EmployeeModel</h4>
+        <hr />
+        <dl class="dl-horizontal" style="width:50%;text-align:left;">
+            <dt>
+                @Html.DisplayNameFor(model => model.employeename)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.employeename)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.employeecity)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.employeecity)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.employeesalary)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.employeesalary)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.employeepassword)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.employeepassword)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.employeedoj)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.employeedoj)
+            </dd>
+    
+        </dl>
+        <p>
+            @Html.ActionLink("Edit", "Edit", "Employee", new { id = Model.employeeid }, null)
+            @Html.ActionLink("Delete", "Delete", "Employee", new { id = Model.employeeid }, null)
+        </p>
+    </div>
+   
+</body>
+</html>
